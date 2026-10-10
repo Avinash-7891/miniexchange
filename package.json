@@ -1,0 +1,51 @@
+{
+  "name": "miniexchange",
+  "version": "1.0.0",
+  "description": "MiniExchange: Simulated Stock-Exchange Order Matching Engine with MERN Backend & Real-time WebSockets",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "server": "node src/server.js",
+    "client": "npm.cmd --prefix client run dev",
+    "build:client": "npm.cmd --prefix client run build",
+    "dev": "node scripts/dev.js",
+    "seed": "node scripts/seed.js",
+    "test": "jest --runInBand --detectOpenHandles --forceExit",
+    "test:watch": "jest --watch",
+    "stress": "node scripts/stressTest.js",
+    "bench": "node scripts/benchmarkEngine.js",
+    "bench:api": "node scripts/benchmarkApi.js",
+    "test:concurrency": "node scripts/concurrencyTest.js"
+  },
+  "keywords": [
+    "order-matching-engine",
+    "limit-order-book",
+    "finance",
+    "trading",
+    "dsa",
+    "express",
+    "react",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.1.4",
+    "mongoose": "^8.9.5",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "autocannon": "^8.0.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 30000
+  }
+}
