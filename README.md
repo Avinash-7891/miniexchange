@@ -163,7 +163,7 @@ miniExchangeProject/
    ```bash
    npm test
    ```
-   *Executes all 29 Jest test suites spanning the matching engine, mandated scenarios 5.3 and 5.4, wallet ledger conservation, and REST API integration.*
+   *Executes all 29 Jest tests (across 4 test suites) spanning the matching engine, mandated scenarios 5.3 and 5.4, wallet ledger conservation, and REST API integration.*
 
 5. **Run Differential Stress Test (150,000 Orders):**
    ```bash
@@ -308,7 +308,7 @@ In financial exchanges, race conditions corrupt order books if two concurrent re
 - **Section 5.3 & 5.4 Mandated Scenarios:** Exact unit tests for all 3 cases of buyer matching multiple sellers, and sellers matching multiple buyers at resting prices.
 - **Ledger Tests:** Verification of atomic locks, price rebates, and double-entry conservation.
 - **API Tests:** End-to-end integration tests for auth, trading, market data, and admin endpoints.
-- **Result:** **29 of 29 test suites passed (100% green).**
+- **Result:** **29 of 29 tests passed (100% green), across 4 test suites.**
 
 ### 10.2 Randomized Differential Stress Testing (150,000 Orders)
 The optimized `OrderBook` was verified against `ReferenceEngine` (a brute-force, array-scanning reference engine). A seeded deterministic PRNG (Mulberry32) generated 150,000 orders across 6 independent seeds (five 10,000 order runs + one 100,000 order run) with random limit/market types, dense price corridors, and random cancellations.
